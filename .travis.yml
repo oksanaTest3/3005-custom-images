@@ -7,7 +7,7 @@ vm:
     name: 3005-image10
 
 script:
-  - echo "Creating custom file"
+  - echo "Creating custom file test"
   - sudo mkdir /my-custom-dir
   - echo "Test custom image!" | sudo tee /my-custom-dir/my_custom_file.txt
   - sudo cat /my-custom-dir/my_custom_file.txt
