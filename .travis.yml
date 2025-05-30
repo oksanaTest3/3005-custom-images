@@ -1,13 +1,6 @@
-os: linux
-language: generic
-dist: focal
-
 vm:
-  create:
-    name: 3005-image7
+  use: 3005-image7
 
 script:
-  - echo "Creating custom file"
-  - sudo mkdir /my-custom-dir
-  - echo "Test custom image!" | sudo tee /my-custom-dir/my_custom_file.txt
+  - echo "Checking if custom file exists"
   - sudo cat /my-custom-dir/my_custom_file.txt
