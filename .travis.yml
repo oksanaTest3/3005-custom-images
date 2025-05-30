@@ -1,18 +1,13 @@
 jobs:
   include:
-    # - stage: create image
-    #   os: linux
-    #   dist: focal
-    #   language: generic
-    #   vm:
-    #     create:
-    #       name: 3005-image4
-    #   before_install:
-    #     - sudo apt-get -y install libxml2-dev
-    #   addons:
-    #     apt:
-    #       update: true
-    - stage: use custom image
+    - stage: use custom 3005-image3
+      # os: linux
+      # dist: focal
+      # language: generic
+      vm:
+        use:
+          name: 3005-image3
+    - stage: use custom 3005-image4
       vm:
         use: 3005-image4
       script:
