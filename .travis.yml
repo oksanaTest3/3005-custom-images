@@ -1,15 +1,13 @@
-jobs:
-  include:
-    - stage: create image
-      vm:
-        create: 
-          name: 3005-image9
-      script:
-        - exit 1
+os: linux
+language: generic
+dist: focal
 
-    - stage: use custom image
-      vm:
-        use: 3005-image9
-      script:
-        - echo "Running job with custom image"
-        
+vm:
+  create:
+    name: fail-image
+
+script:
+  - echo "Creating custom file"
+  - sudo mkdir /my-custom-dir
+  - echo "Test custom image!" | sudo tee /my-custom-dir/my_custom_file.txt
+  - sudo cat /my-custom-dir/my_custom_file.txt
