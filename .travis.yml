@@ -1,4 +1,15 @@
-#test
-vm:
-  use:
-    name: 2905-image4
+jobs:
+   include:
+    - stage: create image
+      os: linux
+      dist: focal
+      language: generic
+      vm:
+        create:
+          name: fail-image
+    - stage: use image
+      vm:
+        use:
+          name: fail-image
+      script:
+        - echo "Running with custom image"
