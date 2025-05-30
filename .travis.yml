@@ -10,40 +10,4 @@ jobs:
       name: "Use custom image 2305-image4"
       vm:
         use:
-          name: 3005-image7
-
-    - stage: "Test"
-      name: "Use custom image 2305-image5"
-      vm:
-        use:
-          name: 3005-image8
-
-    - stage: "Test"
-      name: "Use custom image 2605-image"
-      vm:
-        use:
-          name: 3005-image9
-
-    - stage: "Test"
-      name: "Use custom image 2705-image"
-      vm:
-        use:
-          name: 3005-image10
-
-    - stage: "Test"
-      name: "Use custom image 2705-image3"
-      vm:
-        use:
-          name: 3005-image11
-
-    - stage: "Test"
-      name: "Use custom image 2705-image4"
-      vm:
-        use:
-          name: 3005-image12
-
-    - stage: "Test"
-      name: "Use custom image 2705-image5"
-      vm:
-        use:
-          name: 3005-image13
+          name: 3005-image14
