@@ -6,10 +6,10 @@ jobs:
       language: generic
       vm:
         create: 
-          name: 3005-image
+          name: 3005-image1
 
     - stage: use custom image
       vm:
-        use: 3005-image
+        use: 3005-image1
       script:
         - echo "Running job with custom image"
