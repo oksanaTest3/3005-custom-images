@@ -5,11 +5,15 @@ jobs:
       dist: focal
       language: generic
       vm:
-        create: 
-          name: 3005-image1
-
+        create:
+          name: 3005-image2
+      before_install:
+        - sudo apt-get -y install libxml2-dev
+      addons:
+        apt:
+          update: true
     - stage: use custom image
       vm:
-        use: 3005-image1
+        use: 3005-image2
       script:
         - echo "Running job with custom image"
