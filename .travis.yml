@@ -1,5 +1,6 @@
 vm:
-  use: 3005-image7
+  use: 
+    name: 3005-image7
 
 script:
   - echo "Checking if custom file exists"
