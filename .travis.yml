@@ -40,7 +40,7 @@ jobs:
       name: "Use custom image 2705-image4"
       vm:
         use:
-          name: 3005-image1
+          name: 3005-image12
 
     - stage: "Test"
       name: "Use custom image 2705-image5"
