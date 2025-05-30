@@ -1,18 +1,15 @@
 jobs:
   include:
-    - stage: "Test"
-      name: "Use custom image test1"
+    - stage: create image
       vm:
-        use:
-          name: 3005-image7
+        create: 
+          name: 3005-image9
       script:
-        - echo "Checking if custom file exists"
-        - sudo cat /my-custom-dir/my_custom_file.txt
-    - stage: "Test"
-      name: "Use custom image test2"
+        - exit 1
+
+    - stage: use custom image
       vm:
-        use:
-          name: 2905-image3
+        use: 3005-image9
       script:
-        - echo "Using custom image"
+        - echo "Running job with custom image"
         
